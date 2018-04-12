@@ -1,0 +1,7 @@
+{
+  "name": "git-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Anton Semenov <anta.semenov@gmail.com>",
+  "license": "MIT"
+}
