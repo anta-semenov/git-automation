@@ -1,25 +1,25 @@
-const path = require("path");
-const slsw = require("serverless-webpack");
+const path = require('path');
+const slsw = require('serverless-webpack');
 
 module.exports = {
   entry: slsw.lib.entries,
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   output: {
-    libraryTarget: "commonjs",
-    path: path.join(__dirname, ".webpack"),
-    filename: "[name].js",
+    libraryTarget: 'commonjs',
+    path: path.join(__dirname, '.webpack'),
+    filename: '[name].js',
   },
-  target: "node",
+  target: 'node',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts(x?)$/,
-        loader: "ts-loader",
+        use: ['ts-loader'],
         exclude: [/\.(spec|e2e)\.ts$/],
       },
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: ['.ts', '.tsx', '.js'],
   },
 };
